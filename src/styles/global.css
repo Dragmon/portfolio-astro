@@ -33,6 +33,32 @@
   --color-riptide-900: #124f4b;
   --color-riptide-950: #03302f;
 
+	--color-space-50: #eaf6fb;
+  --color-space-100: #cfe9f5;
+  --color-space-200: #9fd3ea;
+  --color-space-300: #6bb8dc;
+  --color-space-400: #48c4e6;
+  --color-space-500: #2fa7c9;
+  --color-space-600: #1f5e86;
+  --color-space-700: #173c5a;
+  --color-space-800: #0f2236;
+  --color-space-900: #070e1a;
+  --color-space-950: #03060b;
+
+	--color-metal-50: #f4f8fb;
+  --color-metal-100: #e4ebf1;
+  --color-metal-200: #c9d2da;
+  --color-metal-300: #aeb9c4;
+  --color-metal-400: #8c98a6;
+  --color-metal-500: #5e6b78;
+  --color-metal-600: #4a5661;
+  --color-metal-700: #3b444d;
+  --color-metal-800: #2a3138;
+  --color-metal-900: #1b2127;
+
+	--color-gold: #d7b24b;
+  --color-red-alert: #c73a3a;
+
   --animate-rotate: rotate 10s linear infinite;
 
   --animate-rotate-border: border-rotate 3s linear infinite;
@@ -44,31 +70,34 @@
 }
 
 @property --border-angle{
-	  syntax: "<angle>";
+	syntax: "<angle>";
   inherits: false;
   initial-value: 0deg;
 }
 
 ::selection {
-	@apply text-white bg-mint-500;
+	@apply text-white bg-space-500;
 	
   }
 *::-webkit-scrollbar-thumb{
 	border-radius: 20px;
 }
 .dark *{
-	scrollbar-color: #6ce9b7 #012d22;
+	/* scrollbar-color: #6ce9b7 #012d22; */
+	scrollbar-color: var(--color-space-400) var(--color-space-950);
 	scrollbar-width: thin;
 }
  *{
-	scrollbar-color: #6ce9b7 #d0fbe5;
+	/* scrollbar-color: #6ce9b7 #d0fbe5; */
+	scrollbar-color: var(--color-space-400) var(--color-space-100);
 	scrollbar-width: thin;
 	box-sizing: border-box;
 }
 
 
 pre, .dark pre {
-	scrollbar-color: #686868 #424242;
+	/* scrollbar-color: #686868 #424242; */
+	scrollbar-color: var(--color-metal-500) var(--color-metal-700);
 	scrollbar-width:initial;
 }
 
@@ -110,7 +139,7 @@ a.inline-block.leading-5.pl-12{
 }
 
 .markdown a {
-	@apply text-xl max-md:text-lg font-semibold dark:text-riptide-300! text-mint-500! underline hover:text-riptide-400! transition-all;
+	@apply text-xl max-md:text-lg font-semibold dark:text-riptide-300! text-space-500! underline hover:text-riptide-400! transition-all;
 }
 
 .markdown ol{
@@ -128,12 +157,12 @@ a.inline-block.leading-5.pl-12{
 }
 
 .markdown hr {
-	@apply dark:text-mint-300/50 text-blacktext/30;
+	@apply dark:text-space-300/50 text-blacktext/30;
 
 }
 
 .markdown blockquote {
-	@apply py-4 border-l-4 border-mint-500 pl-4 italic text-blacktext dark:text-mint-200 bg-mint-50 dark:bg-mint-900/20 backdrop-blur-lg mb-8;
+	@apply py-4 border-l-4 border-space-500 pl-4 italic text-blacktext dark:text-space-200 bg-space-50 dark:bg-space-900/20 backdrop-blur-lg mb-8;
 }
 
 .markdown blockquote p {
@@ -170,11 +199,11 @@ a.inline-block.leading-5.pl-12{
   }
   
   .task-list-item input[type="checkbox"] {
-	@apply w-5 h-5 accent-mint-300;
+	@apply w-5 h-5 accent-space-300;
   }
   
   .task-list-item input[type="checkbox"]:checked + span {
-	@apply line-through text-mint-600;
+	@apply line-through text-space-600;
   }
   
   .task-list-item span {
@@ -235,7 +264,8 @@ a.inline-block.leading-5.pl-12{
 	display: block;
 	width: 400px;
 	height: 400px;
-	background: #31d69a40;
+	/* background: #31d69a40; */
+	background: rgb(from var(--color-space-400) r g b / 0.25);
 	bottom: -400px;
 	right: -300px;
 	position: fixed;
@@ -247,7 +277,8 @@ a.inline-block.leading-5.pl-12{
 
 
 .blur-circle {
-	background-color: rgba(87, 253, 228, 0.29);
+	/* background-color: rgba(87, 253, 228, 0.29); */
+	background-color: rgb(from var(--color-space-300) r g b / 0.22);
 	position: absolute;
 	width: 200px;
 	height: 200px;
@@ -264,12 +295,12 @@ a.inline-block.leading-5.pl-12{
 	display: block;
 	width: 500px;
 	height: 500px;
-	background: #50fd8f25 !important;
+	/* background: #50fd8f25 !important; */
+	background: rgb(from var(--color-space-500) r g b / 0.14) !important;
 	bottom: -150px;
 	right: -150px;
 	position: absolute;
 	z-index: -1;
 	border-radius: 50%;
 	filter: blur(10px);
-
 }
