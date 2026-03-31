@@ -29,6 +29,10 @@ export const languages: Record<string, Language> = {
     name: "JavaScript",
     iconName: "javascript",
   },
+  jquery: {
+    name: "JQuery",
+    iconName: "jquery",
+  },
   mongo: {
     name: "MongoDb",
     iconName: "mongo",
@@ -58,6 +62,10 @@ export const languages: Record<string, Language> = {
     name: "Firebase",
     iconName: "firebase",
   },
+  hubspot: {
+    name: "HubSpot",
+    iconName: "hubspot"
+  },
   markdown: {
     name: "Markdown",
     iconName: "markdown",
@@ -65,6 +73,14 @@ export const languages: Record<string, Language> = {
   php: {
     name: "PHP",
     iconName: "php",
+  },
+  react: {
+    name: "React",
+    iconName: "react",
+  },
+  reactrouter: {
+    name: "React Router",
+    iconName: "reactrouter",
   },
   sass: {
     name: "Sass",

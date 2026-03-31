@@ -6,17 +6,18 @@ import Heading from "../components/ui/Heading.astro";
 import NavArticle from "../components/layout/NavArticle.astro";
 import Contact from "../components/portfolio/Contact.astro";
 const { frontmatter } = Astro.props;
-
+const displayImage = frontmatter.internalImage || frontmatter.image;
+const arrayImages = frontmatter.sliderImage
 ---
 
 
 <Layout
   pageTitle={frontmatter.title}
   description={frontmatter.description}
-  ogimage={frontmatter.image}
+  ogimage={displayImage}
 >
   <section
-    class="relative mx-auto px-8 max-sm:px-4 flex flex-row justify-center gap-6"
+    class="relative mx-auto px-8 max-sm:px-4 flex flex-row justify-center gap-6 proyectHome"
   >
     <div class="w-64 max-xl:hidden"></div>
     <article
@@ -30,21 +31,20 @@ const { frontmatter } = Astro.props;
             ))
           }
         </div>
-        
         <DatePub date={frontmatter.pubDate} />
-
         <Heading text={frontmatter.title} />
-
-      
       </header>
 
+      {
+        arrayImages ? <h1>Existe un array de imagenes</h1> : null
+      }
       <figure>
         {
-          frontmatter.image?.url && (
+          displayImage?.url && (
             <img
               class="w-full rounded-xl"
-              src={frontmatter.image.url}
-              alt={frontmatter.image.alt || "Article image"}
+              src={displayImage.url}
+              alt={displayImage.alt || "Article image"}
             />
           )
         }
@@ -53,15 +53,12 @@ const { frontmatter } = Astro.props;
       <div class="markdown " id="content">
         <slot />
       </div>
-      
     </article>
     <NavArticle title={frontmatter.title} />
   </section>
   <div
     class="flex flex-col gap-6 max-w-4xl max-lg:py-2 py-3 max-xl:py-2 mx-auto"
   >
-  
-
   </div>
   <Contact />
 </Layout>
