@@ -7,7 +7,7 @@ languages: ["react", "css", "javascript", "vue", "jquery"]
 image:
   url: "/images/projects/konfio/gestion.webp"
   alt: "Miniatura sitio web de babysitter"
-sliderImage: [
+carouselImages: [
   {
     url: '/images/projects/konfio/gestion_home.webp',
     alt: "Imagen de la pantalla principal del sitio web de babysitter"

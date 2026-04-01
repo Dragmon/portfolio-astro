@@ -5,9 +5,16 @@ import Capsule from "../components/ui/Capsule.astro";
 import Heading from "../components/ui/Heading.astro";
 import NavArticle from "../components/layout/NavArticle.astro";
 import Contact from "../components/portfolio/Contact.astro";
+import Carousel from "../components/ui/Carousel.astro";
 const { frontmatter } = Astro.props;
 const displayImage = frontmatter.internalImage || frontmatter.image;
-const arrayImages = frontmatter.sliderImage
+const arrayImages = frontmatter.carouselImages
+
+const images = [
+  { url: "/images/projects/konfio/gestion_factura.webp", alt: "Descripción 1" },
+  { url: "/images/projects/konfio/gestion_facturas.webp", alt: "Descripción 2" },
+  { url: "/images/projects/konfio/gestion_home.webp", alt: "Descripción 3" },
+];
 ---
 
 
@@ -36,19 +43,19 @@ const arrayImages = frontmatter.sliderImage
       </header>
 
       {
-        arrayImages ? <h1>Existe un array de imagenes</h1> : null
+        arrayImages ? <Carousel images={arrayImages}/> :
+        <figure>
+          {
+            displayImage?.url && (
+              <img
+                class="w-full rounded-xl"
+                src={displayImage.url}
+                alt={displayImage.alt || "Article image"}
+              />
+            )
+          }
+        </figure>
       }
-      <figure>
-        {
-          displayImage?.url && (
-            <img
-              class="w-full rounded-xl"
-              src={displayImage.url}
-              alt={displayImage.alt || "Article image"}
-            />
-          )
-        }
-      </figure>
 
       <div class="markdown " id="content">
         <slot />
