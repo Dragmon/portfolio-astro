@@ -5,16 +5,11 @@ import Capsule from "../components/ui/Capsule.astro";
 import Heading from "../components/ui/Heading.astro";
 import NavArticle from "../components/layout/NavArticle.astro";
 import Contact from "../components/portfolio/Contact.astro";
-import Carousel from "../components/ui/Carousel.astro";
+import Media from "../components/ui/Media.astro";
 const { frontmatter } = Astro.props;
 const displayImage = frontmatter.internalImage || frontmatter.image;
-const arrayImages = frontmatter.carouselImages
-
-const images = [
-  { url: "/images/projects/konfio/gestion_factura.webp", alt: "Descripción 1" },
-  { url: "/images/projects/konfio/gestion_facturas.webp", alt: "Descripción 2" },
-  { url: "/images/projects/konfio/gestion_home.webp", alt: "Descripción 3" },
-];
+const arrayImages = frontmatter.carouselImages;
+const video = frontmatter.video;
 ---
 
 
@@ -43,18 +38,7 @@ const images = [
       </header>
 
       {
-        arrayImages ? <Carousel images={arrayImages}/> :
-        <figure>
-          {
-            displayImage?.url && (
-              <img
-                class="w-full rounded-xl"
-                src={displayImage.url}
-                alt={displayImage.alt || "Article image"}
-              />
-            )
-          }
-        </figure>
+        <Media video={video} carouselImages={arrayImages} image={displayImage}/>
       }
 
       <div class="markdown " id="content">

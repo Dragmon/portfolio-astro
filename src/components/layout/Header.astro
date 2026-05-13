@@ -4,6 +4,7 @@ import ThemeIcon from "../ui/ThemeIcon.astro";
 import Social from "../ui/Social.astro";
 import { Icon } from "astro-icon/components";
 import { getCollection } from "astro:content";
+import Logo from "../ui/Logo.astro";
 
 const [staticData] = await getCollection("staticData");
 const { github, githubIconName, linkedin, linkedinIconName } = staticData.data;
@@ -28,10 +29,8 @@ const navItems = isActiveRoute
     class="relative mx-auto flex max-w-7xl flex-row items-center justify-between max-xl:px-6"
   >
     <a href="/" aria-label="Go to home">
-      <Icon
-        name="logo"
-        class="h-6 cursor-pointer transition-all hover:text-space-300"
-        aria-hidden="true"
+      <Logo
+        class="w-22 h-22 cursor-pointer transition-all hover:text-space-300"
       />
     </a>
 

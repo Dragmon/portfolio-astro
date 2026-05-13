@@ -2,7 +2,7 @@
 layout:  /src/layouts/ProjectLayout.astro
 title: 'Babysitter'
 pubDate: 2021-10-10
-description: 'Sitio web del sitio web de babysitter, el cual permitira a los usuarios la busqueda y contratatción de una niñera'
+description: 'Sitio web babysitter, el cual permitira a los usuarios la busqueda y contratatción de una niñera'
 languages: ["react", "css", "javascript", "vercel"]
 image:
   url: "/images/projects/babysitter.webp"
@@ -12,7 +12,7 @@ internalImage:
   alt: "Imagen de la pantalla principal del sitio web de babysitter"
 ---
 
-**Babysitter** es un proyecto de la academia de  Platzi Master en equipo para desarrollar una aplicación web la cual permita la contratación de una niñera en base a la ubicación del usuario.
+**Babysitter** es un proyecto de la academia de  Platzi Master en equipo para desarrollar una aplicación web la cual permita la contratación de una niñera con base en la ubicación del usuario.
 
 ## 💡 Tecnologias utilizadas
 

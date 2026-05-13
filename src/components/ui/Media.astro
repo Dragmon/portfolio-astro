@@ -1,0 +1,12 @@
+---
+import Carousel from "./Carousel.astro";
+const { video, carouselImages, image } = Astro.props;
+---
+
+{video && <video src={video} controls autoplay muted class="w-full rounded-xl" />}
+{!video && carouselImages && <Carousel images={carouselImages} />}
+{!video && !carouselImages && image?.url && (
+  <figure>
+    <img class="w-full rounded-xl" src={image.url} alt={image.alt || "Article image"} />
+  </figure>
+)}

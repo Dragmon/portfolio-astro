@@ -9,7 +9,7 @@ image:
   alt: "Miniatura del sitio de abilia"
 ---
 
-**Abilia** es una compañía mexicana la cual busca mostrar sus catálogo de proyectos inmobiliarios a sus futuros clientes, mediante su sitio web aprovechando la conectividad en distintos dispositivos.
+**Abilia** es una compañía mexicana la cual busca mostrar su catálogo de proyectos inmobiliarios a sus futuros clientes, mediante su sitio web aprovechando la conectividad en distintos dispositivos.
 
 ## 💡 Tecnologias utilizadas
 

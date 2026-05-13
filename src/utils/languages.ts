@@ -126,6 +126,18 @@ export const languages: Record<string, Language> = {
     name: "Python",
     iconName: "python",
   },
+  lit: {
+    name: "Lit",
+    iconName: "lit",
+  },
+  nextjs: {
+    name: "Next Js",
+    iconName: "nextjs",
+  },
+  materialui: {
+    name: "Material UI",
+    iconName: "materialui",
+  },
 };
 
 export const getLanguage = (lang: string): Language => {
