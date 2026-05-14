@@ -4,21 +4,21 @@ import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
 import  SpeedInsights  from "@vercel/speed-insights/astro"
 const {
-  pageTitle = "NeonMint by EFEELE 🚀",
-  description = "Welcome to NeonMint by EFEELE, where I develop software and share knowledge.",
+  pageTitle = "Portafolio Carlos Perez",
+  description = "Protafolio donde muestro mis proyectos y tecnologías que he usado",
   ogimage = {
     url: "/images/imagedefault.webp",
-    alt: "Default image of EFEELE",
+    alt: "Imagen por default",
   },
 } = Astro.props;
 
 const siteUrl = new URL(Astro.url).origin;
 const SEO = {
-  sitename: "NeonMint by EFEELE🚀",
+  sitename: "Portafolio Carlos Pérez",
   url: siteUrl,
   locale: "en_US",
-  author: "Fernando Lopez | EFEELE",
-  twitter: "@efeeledev",
+  author: "Carlos Pérez",
+  twitter: "",
 };
 
 
@@ -50,9 +50,9 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <!-- Open Graph / Facebook -->
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={ogimage.url} />
+    <meta property="og:image" content={`${siteUrl}${ogimage.url}`} />
     <meta property="og:image:alt" content={ogimage.alt} />
-    <meta property="og:url" content={SEO.url} />
+    <meta property="og:url" content={`${siteUrl}${Astro.url.pathname}`} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SEO.sitename} />
     <meta property="og:locale" content={SEO.locale} />

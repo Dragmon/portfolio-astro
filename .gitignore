@@ -6,6 +6,9 @@ dist/
 
 # generated types
 .astro/
+*.swp
+*.swo
+*.swl
 
 # dependencies
 node_modules/
