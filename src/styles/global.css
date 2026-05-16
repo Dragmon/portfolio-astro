@@ -2,12 +2,56 @@
 
 @import 'tailwindcss';
 
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-800.woff2') format('woff2');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Nunito';
+  src: url('/fonts/Nunito-Italic.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-montserrat: 'Montserrat', sans-serif;
   --font-roboto: 'Roboto', sans-serif;
   --font-opensans: 'Open Sans', sans-serif;
+	--font-nunito: 'Nunito', san-serif;
   --color-blacktext: #171717;
   --color-mint-50: #ecfdf5;
   --color-mint-100: #d0fbe5;
@@ -75,6 +119,12 @@
   initial-value: 0deg;
 }
 
+@layer base {
+  body {
+    @apply font-nunito;
+  }
+}
+
 ::selection {
 	@apply text-white bg-space-500;
 	
@@ -135,7 +185,7 @@ a.inline-block.leading-5.pl-12{
 
 
 .markdown p {
-	@apply tracking-normal font-montserrat text-pretty text-xl max-md:text-lg text-blacktext dark:text-gray-200 mb-8 leading-8;
+	@apply tracking-normal text-pretty text-xl max-md:text-lg text-blacktext dark:text-gray-200 mb-8 leading-8;
 }
 
 .markdown a {
