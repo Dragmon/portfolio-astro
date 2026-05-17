@@ -1,10 +1,13 @@
+# 🧑‍💻 Portfolio Personal — Dragmon
 
-Based on [NeonMint](https://github.com/EFEELE/NeonMint) by Fernando Aldair Lopez Ponce.
+Portafolio personal desarrollado con Astro, basado en el template [NeonMint](https://github.com/EFEELE/NeonMint) de [Fernando Aldair Lopez Ponce](https://github.com/EFEELE), al cual se le han realizado modificaciones y personalizaciones propias.
 
-## 📁 Project Structure
+---
 
-```bash
-└── 📁NeonMint
+## 📁 Estructura del Proyecto
+
+```
+└── 📁portfolio-astro
     └── 📁public
         ├── android-chrome-192x192.png
         ├── android-chrome-512x512.png
@@ -13,215 +16,172 @@ Based on [NeonMint](https://github.com/EFEELE/NeonMint) by Fernando Aldair Lopez
         ├── favicon-32x32.png
         ├── favicon.ico
         └── 📁images
-            ├── 📁posts    # Post images
-            └── 📁projects # Project images
-        └── site.webmanifest # PWA configuration file
+            ├── 📁posts       # Imágenes de posts
+            └── 📁projects    # Imágenes de proyectos
+        └── site.webmanifest  # Configuración PWA
     └── 📁src
-        ├── 📁components  # Reusable UI components
-        │   ├── 📁blog    # Blog components
-        │   ├── 📁layout  # Layout components
-        │   ├── 📁portfolio # Portfolio components
-        │   └── 📁ui      # UI components
-        ├── 📁icons       # Icons (.svg)
-        ├── 📁layouts     # Site layouts
-        │   ├── Layout.astro           # Main application layout
-        │   ├── MarkdownAbout.astro    # About-me page layout
-        │   ├── MarkdownPostLayout.astro # Posts page layout
-        │   └── ProjectLayout.astro    # Projects page layout
-        ├── 📁pages       # Site pages
-        │   ├── about-me.md            # About-me page
-        │   ├── 📁blog   # All posts page
-        │   │   ├── index.astro        # Blog home page
-        │   │   ├── 📁posts            # Blog posts
-        ├── │   ├── └── index.astro     # All posts page
-        │   │   ├── 📁tags             # Blog tags
-        │   │   └── 📁techs            # Blog technologies
-        │   ├── index.astro            # Home page
+        ├── 📁components      # Componentes reutilizables
+        │   ├── 📁blog        # Componentes del blog
+        │   ├── 📁layout      # Componentes de layout
+        │   ├── 📁portfolio   # Componentes del portafolio
+        │   └── 📁ui          # Componentes de interfaz
+        ├── 📁icons           # Íconos SVG
+        ├── 📁layouts         # Layouts del sitio
+        │   ├── Layout.astro
+        │   ├── MarkdownAbout.astro
+        │   ├── MarkdownPostLayout.astro
+        │   └── ProjectLayout.astro
+        ├── 📁pages           # Páginas del sitio
+        │   ├── about-me.md
+        │   ├── 📁blog
+        │   │   ├── index.astro
+        │   │   ├── 📁posts
+        │   │   ├── 📁tags
+        │   │   └── 📁techs
+        │   ├── index.astro
         │   ├── 📁portfolio
-        │   │   └── 📁projects         # Portfolio projects
-        │   ├── robots.txt.ts          # robots.txt configuration
-        │   └── rss.xml.js             # RSS configuration
+        │   │   └── 📁projects
+        │   ├── robots.txt.ts
+        │   └── rss.xml.js
         ├── 📁scripts
-        │   └── menu.js                # Menu script
+        │   └── menu.js
         ├── 📁styles
-        │   └── global.css             # Global styles
+        │   └── global.css
         └── 📁utils
-            └── languages.ts           # Technology tools configuration
+            └── languages.ts
     ├── .gitignore
     ├── astro.config.mjs
-    ├── package-lock.json
     ├── package.json
     ├── README.md
     └── tsconfig.json
 ```
 
-## 🛠️ Technology Stack
+---
 
-- **Framework**: Astro v5.6.1
-- **UI Library**: Preact v10.26.2
-- **Styling**: TailwindCSS v4.0.8
-- **Icons**: astro-icon v1.1.5
-- **Syntax Highlighting**: PrismJS v1.30.0
-- **Animations**: tailwindcss-animated v2.0.0
-- **Analytics**: @vercel/speed-insights v1.2.0
+## 🛠️ Stack Tecnológico
 
-## ✨ Key Features
-
-1. **🚀 Performance Optimized**
-   - Static site generation
-   - Partial hydration with Preact
-   - Optimized images and assets
-
-2. **💻 Modern Development Experience**
-   - TypeScript support
-   - Hot module replacement
-   - ESLint integration
-
-3. **🔍 SEO & Analytics**
-   - Built-in sitemap generation
-   - RSS feed support
-   - Vercel Speed Insights
-
-4. **🎨 Styling & UI**
-   - TailwindCSS for utility-first styling
-   - Animated components
-   - Responsive design
-   - Dark mode support
-
-## 🚀 Getting Started
-
-1. **📦 Installation**
-
-   ### 🚀**Astro Installation**
-   ```bash
-   npm create astro@latest -- --template EFEELE/neonmint
-   ```
-   or
-   ### 🔧**Manual Installation**
-   
-   #### Clone Repository
-   ```bash
-   git clone https://github.com/EFEELE/NeonMint.git
-   ```
-   #### Install Dependencies
-   ```bash
-   npm install
-   ```
-
-  
-
-3. **⚡ Development**
-   ```bash
-   npm run dev
-   ```
-
-4. **🏗️ Build**
-   ```bash
-   npm run build
-   ```
-
-5. **👀 Preview**
-   ```bash
-   npm run preview
-   ```
-
-## ⚙️ Configuration
-
-The project is configured through several key files:
-
-- `astro.config.mjs`: Main Astro configuration
-- `tailwind.config.js`: TailwindCSS configuration
-- `tsconfig.json`: TypeScript configuration
-
-## 🎨 Customization
-
-### 📄 Adding New Pages
-
-Create new `.astro` files in the `src/pages` directory. The file name will determine the route.
-
-### 🔧 Adding New Languages or Technologies
-
-To incorporate a new programming language or technological tool into the site's capsules, follow these steps:
-
-1. **🖼️ Add the SVG icon**: Place the SVG file of the language or tool in the `src/icons` folder.
-
-        > **💡 Recommendation**: For SVG icons, I recommend using [SVGL](https://svgl.app/), an excellent library of high-quality vectors that offers optimized icons for most popular languages and technologies.
-
-2. **📝 Register the language**: Open the `utils/languages.ts` file and add a new entry to the languages object following this format:
-
-   ```typescript
-   html: {
-       name: "HTML 5",
-       iconName: "html",
-   },
-   ```
-
-   Where:
-   - `html`: Is the unique identifier for the language
-   - `name`: Is the name that will be displayed visibly in the interface
-   - `iconName`: Is the name of the SVG file without the extension (must match exactly with the file name in `src/icons`)
-
-Once these steps are completed, the new language or technology will be available for use in the site's capsules. You can select it when creating or editing projects or posts, and the corresponding icon will be displayed correctly in the interface.
-
-If you encounter any issues during this process, try restarting the development server. In some cases, changes to configuration files or static resources require a restart to be detected correctly.
-
-To verify that the new language has been added correctly, check the list of available technologies in the user interface after restarting the server.
+- **Framework**: Astro v5
+- **UI Library**: Preact v10
+- **Styling**: TailwindCSS v4
+- **Interactividad**: Alpine.js v3
+- **Carrusel**: Embla Carousel v8
+- **Íconos**: astro-icon v1
+- **Syntax Highlighting**: PrismJS v1
+- **Animaciones**: tailwindcss-animated v2
+- **Analytics**: @vercel/speed-insights v1
 
 ---
 
-### 🧷 Favicon Setup
+## ✨ Características
 
-To customize your site's favicon and web app icons, you can generate all the necessary variants using [favicon.io](https://favicon.io/favicon-converter/). Upload your logo or icon, and the tool will create a full set of optimized files for various devices and platforms.
+- 🚀 Generación estática con Astro (SSG)
+- 💨 Hidratación parcial con Preact
+- 🎨 Estilos con TailwindCSS utility-first
+- 🌙 Soporte para modo oscuro
+- 📱 Diseño responsivo
+- 🔍 Sitemap generado automáticamente
+- 📡 Feed RSS
+- 📊 Vercel Speed Insights
+- ✍️ Soporte para posts en Markdown
+- 🧩 Sección de portafolio con proyectos
 
-Place the generated files in the `📂 public` directory as follows:
+---
+
+## 🚀 Inicio Rápido
+
+### 1. Clonar el repositorio
 
 ```bash
-📂 public
-├── 📄 android-chrome-192x192.png
-├── 📄 android-chrome-512x512.png
-├── 📄 apple-touch-icon.png
-├── 📄 favicon-16x16.png
-├── 📄 favicon-32x32.png
-├── 📄 favicon.ico
-└── 📄 site.webmanifest
+git clone https://github.com/Dragmon/portfolio-astro.git
+cd portfolio-astro
 ```
 
-> 💡 Don’t forget to update the contents of `site.webmanifest` to match your app’s name, description, and theme color for a complete PWA experience.
+### 2. Instalar dependencias
+
+```bash
+npm install
+```
+
+### 3. Desarrollo local
+
+```bash
+npm run dev
+```
+
+### 4. Build para producción
+
+```bash
+npm run build
+```
+
+### 5. Preview del build
+
+```bash
+npm run preview
+```
 
 ---
 
-### 🎨 Styling
+## ⚙️ Configuración
 
-- Use TailwindCSS classes for styling
-- Add custom styles in `src/styles/global.css`
+Los archivos de configuración principales son:
 
-### 🧩 Components
+- `astro.config.mjs` — Configuración de Astro
+- `tsconfig.json` — Configuración de TypeScript
+- `src/styles/global.css` — Estilos globales
 
-- Create reusable components in `src/components`
-- Import icons using `astro-icon`
+---
 
-## 🚀 Deployment
+## 🎨 Personalización
 
-The site is configured for deployment on Vercel, but can be deployed to any static hosting service.
+### Agregar nuevas tecnologías o lenguajes
 
-## 🤝 Contributing
+1. Coloca el ícono SVG en `src/icons/`. Se recomienda usar [SVGL](https://svgl.app/) como fuente de íconos de calidad.
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
+2. Registra la tecnología en `src/utils/languages.ts`:
 
-## 👥 Contributors  
+```ts
+html: {
+  name: "HTML 5",
+  iconName: "html",
+},
+```
 
-A huge thanks to all the amazing people who have contributed to this project!  
-Your time, effort, and ideas make this repository better every day. 💚  
+### Favicon
 
-<a href="https://github.com/EFEELE/NeonMint/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=EFEELE/NeonMint" />
-</a>
+Genera los archivos necesarios en [favicon.io](https://favicon.io/favicon-converter/) y colócalos en `public/`:
 
-## 📄 License
+```
+public/
+├── android-chrome-192x192.png
+├── android-chrome-512x512.png
+├── apple-touch-icon.png
+├── favicon-16x16.png
+├── favicon-32x32.png
+├── favicon.ico
+└── site.webmanifest
+```
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+Recuerda actualizar `site.webmanifest` con el nombre y colores de tu sitio.
 
+---
+
+## 🚀 Despliegue
+
+El sitio está configurado para Vercel, pero puede desplegarse en cualquier servicio de hosting estático (Netlify, Cloudflare Pages, etc.).
+
+> **Nota:** La carpeta `dist/` no se sube al repositorio. Se genera automáticamente al ejecutar `npm run build`.
+
+---
+
+## 📄 Licencia
+
+Este proyecto está licenciado bajo la [MIT License](./LICENSE).
+
+El archivo `LICENSE` conserva el copyright original del template base, conforme a los términos de la licencia MIT.
+
+---
+
+## 🙏 Créditos
+
+Este portafolio está basado en el template [NeonMint](https://github.com/EFEELE/NeonMint), creado por [Fernando Aldair Lopez Ponce](https://github.com/EFEELE).
