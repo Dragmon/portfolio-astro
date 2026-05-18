@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import Header from "../components/layout/Header.astro";
 import Footer from "../components/layout/Footer.astro";
-import  SpeedInsights  from "@vercel/speed-insights/astro"
+
 const {
   pageTitle = "Portafolio Carlos Perez",
   description = "Protafolio donde muestro mis proyectos y tecnologías que he usado",
@@ -71,9 +71,22 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <!-- Sitemap -->
     <link rel="sitemap" href="/sitemap-index.xml" />
     
+    <!-- Google Tag Manager -->
+    <script is:inline>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5KQBWJV');
+    </script>
   </head>
   <body class="overflow-x-hidden">
-    <SpeedInsights/>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5KQBWJV"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+
     <div class="blur-circle"></div>
     <div
       style="  background:linear-gradient(45deg, rgba(96, 250, 155, 0) 10.79%, rgba(96, 250, 170, 0.03) 40.92%, rgba(96, 250, 155, 0) 90.35%)"
