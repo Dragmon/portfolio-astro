@@ -5,7 +5,7 @@ import Footer from "../components/layout/Footer.astro";
 
 const {
   pageTitle = "Portafolio Carlos Perez",
-  description = "Protafolio donde muestro mis proyectos y tecnologías que he usado",
+  description = "Portafolio donde muestro mis proyectos y tecnologías que he usado",
   ogimage = {
     url: "/images/imagedefault.webp",
     alt: "Imagen por default",
@@ -16,9 +16,8 @@ const siteUrl = new URL(Astro.url).origin;
 const SEO = {
   sitename: "Portafolio Carlos Pérez",
   url: siteUrl,
-  locale: "en_US",
+  locale: "es_MX",
   author: "Carlos Pérez",
-  twitter: "",
 };
 
 
@@ -26,7 +25,7 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
 ---
 
 <html
-  lang="en"
+  lang="es"
   class="dark:bg-[#0E0E11] bg-space-50/5 scroll-smooth"
 >
   <head>
@@ -64,8 +63,6 @@ const twitterimage = `${siteUrl}${ogimage.url}`;
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={twitterimage} />
     <meta name="twitter:image:alt" content={ogimage.alt} />
-    <meta name="twitter:site" content={SEO.twitter} />
-  
     <meta name="theme-color" content="#0E0E11"/>
 
     <!-- Sitemap -->
