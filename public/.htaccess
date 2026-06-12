@@ -3,3 +3,6 @@ ErrorDocument 404 /404.html
 RedirectMatch 301 ^/marhnos/?$ /portfolio/projects/marhnos/
 RedirectMatch 301 ^/konfio-gestion/?$ /portfolio/projects/konfio/
 RedirectMatch 301 ^/abilia/?$ /portfolio/projects/abilia/
+RedirectMatch 301 ^/ammper-facturacion/?$ /portfolio/projects/ammper/
+RedirectMatch 301 ^/babysitter/?$ /portfolio/projects/babysitter/
+RedirectMatch 301 ^/televisaconnect/?$ /portfolio/projects/televisaconnect/
